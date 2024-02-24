@@ -1,0 +1,32 @@
+
+> ui@1.0.0 build /Users/martindavila/Developer/Monorepo-portfolio/packages/ui
+> tsup
+
+CLI Building entry: src/index.tsx, src/components/Avatar.tsx, src/components/Button.tsx, src/components/Dialog.tsx, src/components/Portal.tsx, src/components/Spinner.tsx, src/components/Stack.tsx, src/components/index.tsx
+CLI Using tsconfig: tsconfig.json
+CLI tsup v6.6.0
+CLI Using tsup config: /Users/martindavila/Developer/Monorepo-portfolio/packages/ui/tsup.config.ts
+CLI Target: es6
+CLI Cleaning output folder
+ESM Build start
+DTS Build start
+ESM dist/chunk-3TCQU24P.mjs     1.30 KB
+ESM dist/components/Avatar.mjs  176.00 B
+ESM dist/components/Button.mjs  128.00 B
+ESM dist/index.mjs              564.00 B
+ESM dist/components/Portal.mjs  144.00 B
+ESM dist/components/Stack.mjs   120.00 B
+ESM dist/components/index.mjs   563.00 B
+ESM dist/components/Spinner.mjs 369.00 B
+ESM dist/chunk-V4S6752M.mjs     5.89 KB
+ESM dist/chunk-QMPXBEC5.mjs     4.39 KB
+ESM dist/components/Dialog.mjs  298.00 B
+ESM dist/chunk-HBY7LPZH.mjs     71.86 KB
+ESM dist/chunk-NIIBLMLP.mjs     4.99 KB
+ESM dist/chunk-3KL4GALG.mjs     4.71 KB
+ESM dist/chunk-LEDEXFZB.mjs     447.00 B
+ESM dist/chunk-YPM2C4PX.mjs     1.02 KB
+ESM dist/chunk-YBLJEGYP.mjs     5.25 KB
+ESM dist/chunk-J7QR74LE.mjs     62.71 KB
+ESM dist/chunk-YZ735GKI.mjs     1.90 KB
+ESM ⚡️ Build success in 576ms

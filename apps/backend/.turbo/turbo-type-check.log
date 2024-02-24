@@ -1,0 +1,7 @@
+
+> backend@0.1.0 type-check /Users/martindavila/Developer/Monorepo-portfolio/apps/backend
+> tsc --noEmit
+
+src/api/graphql/resolvers/todoResolver.ts(2,33): error TS2307: Cannot find module 'validation-schema' or its corresponding type declarations.
+src/api/graphql/resolvers/userResolvers.ts(2,33): error TS2307: Cannot find module 'validation-schema' or its corresponding type declarations.
+ ELIFECYCLE  Command failed with exit code 2.

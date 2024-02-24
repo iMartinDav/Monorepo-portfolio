@@ -1,0 +1,4 @@
+
+> validation-schema@1.0.0 type-check /Users/martindavila/Developer/Monorepo-portfolio/packages/validation-schema
+> tsc --noEmit
+
