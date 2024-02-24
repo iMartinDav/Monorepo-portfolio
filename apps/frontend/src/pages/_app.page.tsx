@@ -2,7 +2,7 @@ import '../styles/globals.css'
 import 'ui/styles.css'
 
 import { Auth0Provider } from '@auth0/auth0-react'
-import { Inter } from "next/font/google"
+import { Inter } from '@next/font/google'
 import { AppProps } from 'next/app'
 
 import { Navbar, UrqlClientProvider } from '~/components/'

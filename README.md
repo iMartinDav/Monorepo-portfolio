@@ -188,4 +188,3 @@ pnpm run generate:graphql
 ```
 
 this will run `turbo run codgen:graphql`, which runs all codegen:graphql in each package.
-# Monorepo-portfolio

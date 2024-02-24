@@ -9,10 +9,14 @@ CLI Using tsup config: /Users/martindavila/Developer/Monorepo-portfolio/packages
 CLI Target: node14
 CLI Cleaning output folder
 ESM Build start
+ESM dist/index.mjs             104.00 B
 ESM dist/chunk-G66ZGWXT.mjs    97.07 KB
+ESM dist/zodSchema.mjs         104.00 B
 ESM dist/generated/graphql.mjs 692.00 B
 ESM dist/chunk-TMTHJJR4.mjs    480.00 B
-ESM dist/index.mjs             104.00 B
-ESM dist/zodSchema.mjs         104.00 B
-ESM ⚡️ Build success in 165ms
+ESM ⚡️ Build success in 186ms
 DTS Build start
+DTS ⚡️ Build success in 1157ms
+DTS dist/index.d.ts             114.00 B
+DTS dist/zodSchema.d.ts         666.00 B
+DTS dist/generated/graphql.d.ts 2.70 KB
