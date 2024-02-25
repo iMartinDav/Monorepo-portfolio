@@ -1,6 +1,9 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useMutation } from "urql";
+import { TodoInputSchema } from "validation-schema";
+
 import {
   Button,
   DialogContent,
@@ -8,10 +11,7 @@ import {
   DialogFooter,
   DialogTitle,
   VStack,
-} from "ui";
-import { useMutation } from "urql";
-import { TodoInputSchema } from "validation-schema";
-
+} from "@/lib/utils";
 import { TextArea, TextField } from "~/components";
 import { gql } from "~/generated";
 import { TodoInput } from "~/generated/graphql";

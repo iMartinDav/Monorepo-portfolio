@@ -1,16 +1,17 @@
-import { useAuth0 } from '@auth0/auth0-react'
-import { Button } from 'ui'
+import { useAuth0 } from "@auth0/auth0-react";
 
-import { Role } from '~/generated/graphql'
+import { Role } from "~/generated/graphql";
+
+import { Button } from "../../../@/components/ui/button";
 
 function SignIn() {
-  const { loginWithRedirect } = useAuth0()
+  const { loginWithRedirect } = useAuth0();
 
   const loginAsUser = () => {
     loginWithRedirect({
       role: Role.User,
-    })
-  }
+    });
+  };
 
   return (
     <div>
@@ -22,7 +23,7 @@ function SignIn() {
         </Button>
       </div>
     </div>
-  )
+  );
 }
 
-export default SignIn
+export default SignIn;

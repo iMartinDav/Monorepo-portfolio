@@ -1,10 +1,10 @@
-import { Suspense } from 'react'
-import { Button, Dialog, DialogTrigger, Spinner } from 'ui'
+import { Suspense } from "react";
 
-import { DevNote } from '~/components/general/DevNote'
+import { Button, Dialog, DialogTrigger, Spinner } from "@/lib/utils/";
+import { DevNote } from "~/components/general/DevNote";
 
-import { CreateTodoModal } from './CreateTodoModal'
-import { TodoList } from './TodoList'
+import { CreateTodoModal } from "./CreateTodoModal";
+import { TodoList } from "./TodoList";
 
 function Todos() {
   return (
@@ -28,7 +28,7 @@ function Todos() {
         </Suspense>
       </div>
     </div>
-  )
+  );
 }
 
-export default Todos
+export default Todos;

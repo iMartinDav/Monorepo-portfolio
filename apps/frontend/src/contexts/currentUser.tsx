@@ -1,17 +1,17 @@
-import { useAuth0 } from '@auth0/auth0-react'
-import { useRouter } from 'next/router'
-import React, { createContext, useContext, useMemo } from 'react'
-import { Spinner } from 'ui'
-import { useQuery } from 'urql'
+import { useAuth0 } from "@auth0/auth0-react";
+import { useRouter } from "next/router";
+import React, { createContext, useContext, useMemo } from "react";
+import { Spinner } from "ui";
+import { useQuery } from "urql";
 
-import { gql } from '~/generated'
+import { gql } from "~/generated";
 
 type CurrentUserModel = Omit<
   ReturnType<typeof useCurrentUserInternal>,
-  'auth0Loading' | 'getProfileFetching'
->
+  "auth0Loading" | "getProfileFetching"
+>;
 
-const CurrentUserContext = createContext<CurrentUserModel>(undefined as any)
+const CurrentUserContext = createContext<CurrentUserModel>(undefined as any);
 
 const GetProfile = gql(/* GraphQL */ `
   query GetProfile {
@@ -31,25 +31,25 @@ const GetProfile = gql(/* GraphQL */ `
       }
     }
   }
-`)
+`);
 
 export function useCurrentUser() {
-  return useContext(CurrentUserContext)
+  return useContext(CurrentUserContext);
 }
 
 function useCurrentUserInternal() {
-  const { isAuthenticated, user, isLoading } = useAuth0()
+  const { isAuthenticated, user, isLoading } = useAuth0();
 
   const [res, execute] = useQuery({
     query: GetProfile,
-    requestPolicy: 'network-only',
+    requestPolicy: "network-only",
     pause: !isAuthenticated,
-  })
+  });
 
   const isOnboarded = useMemo(
-    () => isAuthenticated && res.data?.getProfile?.__typename === 'User',
+    () => isAuthenticated && res.data?.getProfile?.__typename === "User",
     [isAuthenticated, res.data?.getProfile?.__typename]
-  )
+  );
 
   return {
     currentUser: res.data?.getProfile,
@@ -58,30 +58,30 @@ function useCurrentUserInternal() {
     isOnboarded,
     isAuthenticated,
     executeGetProfile: execute,
-  }
+  };
 }
 
 export function CurrentUserProvider({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const value = useCurrentUserInternal()
-  const router = useRouter()
+  const value = useCurrentUserInternal();
+  const router = useRouter();
 
-  const { auth0Loading, getProfileFetching, ...rest } = value
+  const { auth0Loading, getProfileFetching, ...rest } = value;
 
   if (auth0Loading || getProfileFetching) {
-    return <Spinner global />
+    return <Spinner global />;
   }
 
-  const { isAuthenticated, isOnboarded } = rest
+  const { isAuthenticated, isOnboarded } = rest;
 
-  console.log('isOnboarded', isOnboarded)
+  console.log("isOnboarded", isOnboarded);
 
   if (isAuthenticated && !isOnboarded) {
-    if (router.pathname !== '/onboarding') {
-      router.replace('/onboarding')
+    if (router.pathname !== "/onboarding") {
+      router.replace("/onboarding");
     }
   }
 
@@ -89,5 +89,5 @@ export function CurrentUserProvider({
     <CurrentUserContext.Provider value={rest}>
       {children}
     </CurrentUserContext.Provider>
-  )
+  );
 }
