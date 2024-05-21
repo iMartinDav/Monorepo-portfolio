@@ -1,6 +1,0 @@
-export * from './Button'
-export * from './Avatar'
-export * from './Dialog'
-export * from './Portal'
-export * from './Spinner'
-export * from './Stack'

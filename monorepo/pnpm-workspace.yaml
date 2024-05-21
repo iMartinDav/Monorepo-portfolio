@@ -1,0 +1,6 @@
+packages:
+  - 'apps/*'
+  - 'packages/*'
+  - 'apps/apollo/**'
+  - 'apps/uiblocks/**'
+  - 'apps/portfolio/**'
