@@ -1,7 +1,7 @@
 import type { UseSubmenuOverlayPositionProps } from "@/types";
 import { useEventListener } from "primereact/hooks";
 import { DomHandler } from "primereact/utils";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useCallback } from "react";
 import { LayoutContext } from "../context/layoutcontext";
 import { MenuContext } from "../context/menucontext";
 
@@ -15,7 +15,7 @@ export const useSubmenuOverlayPosition = ({
         useContext(LayoutContext);
     const { activeMenu } = useContext(MenuContext);
 
-    const handleScroll = () => {
+    const handleScroll = useCallback(() => {
         setLayoutState((prevLayoutState) => ({
             ...prevLayoutState,
             overlayMenuActive: false,
@@ -24,7 +24,7 @@ export const useSubmenuOverlayPosition = ({
             menuHoverActive: false,
             resetMenu: true,
         }));
-    };
+    }, [setLayoutState]);
 
     const [bindScrollListener, unbindScrollListener] = useEventListener({
         type: "scroll",
@@ -32,7 +32,7 @@ export const useSubmenuOverlayPosition = ({
         listener: handleScroll,
     });
 
-    const calculatePosition = () => {
+    const calculatePosition = useCallback(() => {
         if (overlay && target) {
             const { left, top } = target.getBoundingClientRect();
             const { width: vWidth, height: vHeight } = DomHandler.getViewport();
@@ -61,7 +61,7 @@ export const useSubmenuOverlayPosition = ({
                         : `${top}px`;
             }
         }
-    };
+    }, [overlay, target, container, isHorizontal, isSlim, isSlimPlus]);
 
     useEffect(() => {
         if (when) {
@@ -71,11 +71,11 @@ export const useSubmenuOverlayPosition = ({
         return () => {
             unbindScrollListener();
         };
-    }, [when]);
+    }, [when, bindScrollListener, unbindScrollListener]);
 
     useEffect(() => {
         if (when) {
             calculatePosition();
         }
-    }, [when, activeMenu]);
+    }, [when, activeMenu, calculatePosition]);
 };

@@ -118,7 +118,7 @@ const Documentation = () => {
             </p>
             <pre className="app-code">
                 <code>
-                    {`"use client"
+                    {`'use client'
 import { LayoutProvider } from "../layout/context/layoutcontext";
 import { PrimeReactProvider } from "primereact/api";
 
@@ -236,7 +236,7 @@ export default function FullPageLayout({ children }: FullPageLayoutProps) {
 
             <pre className="app-code">
                 <code>
-                    {`"use client"
+                    {`'use client'
 import React, { useState } from 'react';
 import Head from 'next/head';
 
