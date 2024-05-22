@@ -113,7 +113,7 @@ const BlocksDemo = () => {
                             </li>
                         </ul>
                         <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300 mt-auto" />
-                        <Button label="Buy Now" className="p-3 w-full mt-auto" />
+
                     </div>
                 </div>
             </div>
@@ -148,7 +148,6 @@ const BlocksDemo = () => {
                             </li>
                         </ul>
                         <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300" />
-                        <Button label="Buy Now" className="p-3 w-full" />
                     </div>
                 </div>
             </div>
@@ -191,7 +190,6 @@ const BlocksDemo = () => {
                             </li>
                         </ul>
                         <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300" />
-                        <Button label="Buy Now" className="p-3 w-full" outlined />
                     </div>
                 </div>
             </div>
@@ -629,10 +627,6 @@ const BlocksDemo = () => {
                                         </li>
                                     </ul>
                                     <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300 mt-auto" />
-                                    <Button
-                                        label="Buy Now"
-                                        className="p-3 w-full mt-auto"
-                                    />
                                 </div>
                             </div>
                         </div>
@@ -686,10 +680,6 @@ const BlocksDemo = () => {
                                         </li>
                                     </ul>
                                     <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300" />
-                                    <Button
-                                        label="Buy Now"
-                                        className="p-3 w-full"
-                                    />
                                 </div>
                             </div>
                         </div>
@@ -755,11 +745,6 @@ const BlocksDemo = () => {
                                         </li>
                                     </ul>
                                     <hr className="mb-3 mx-0 border-top-1 border-bottom-none border-300" />
-                                    <Button
-                                        label="Buy Now"
-                                        className="p-3 w-full"
-                                        outlined
-                                    />
                                 </div>
                             </div>
                         </div>

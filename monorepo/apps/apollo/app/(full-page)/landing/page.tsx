@@ -151,13 +151,7 @@ const LandingPage: Page = () => {
                                     <Ripple />
                                 </a>
                             </li>
-                            <li>
-                                <Button
-                                    type="button"
-                                    label="Buy Now"
-                                    className="m-0 mt-3 md:mt-0 md:ml-5"
-                                ></Button>
-                            </li>
+                            <li></li>
                         </ul>
                     </div>
                 </div>
