@@ -10,7 +10,7 @@ const Custom404: Page = () => {
                         Are you lost?
                     </div>
                     <p className="text-700 text-3xl mt-0 mb-6">
-                        Sorry, we couldn't find the page.
+                        Sorry, we couldn&#39;t find the page.
                     </p>
                     <Button
                         type="button"
